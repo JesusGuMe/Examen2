@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Planteles</title>
+</head>
+<body>
+    <div>
+        <h2>Plantel</h2>
+        <a href="nuevo_plantel">Agregar</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de Institucion</th>
+                    <th>Campus</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for plan in plantel%}
+                    <tr>
+                        <td>{{plan.id}}</td>
+                        <td>{{plan.nombre_institucion}}</td>
+                        <td>{{plan.campus}}</td>
+                        <td><a href="detalle_plantel/{{plan.id}}">Detalles</a></td>
+                        <td><a href="editar_plantel/{{plan.id}}">Editar</a></td>
+                        <td><a href="eliminar_plantel/{{plan.id}}">Eliminar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

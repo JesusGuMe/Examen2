@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Docentes</title>
+</head>
+<body>
+    <div>
+        <h2>Docentes</h2>
+        <a href="nuevo_docente">Agregar</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Materia</th>
+                    <th>Carrera</th>
+                    <th>Domicilio</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for docen in docente%}
+                    <tr>
+                        <td>{{docen.id}}</td>
+                        <td>{{docen.nombre}}</td>
+                        <td>{{docen.materia}}</td>
+                        <td>{{docen.carrera}}</td>
+                        <td>{{docen.domicilio}}</td>
+                        <td><a href="detalle_docente/{{docen.id}}">Detalles</a></td>
+                        <td><a href="editar_docente/{{docen.id}}">Editar</a></td>
+                        <td><a href="eliminar_docente/{{docen.id}}">Eliminar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
