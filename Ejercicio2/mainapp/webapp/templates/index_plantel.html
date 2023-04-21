@@ -9,13 +9,15 @@
 <body>
     <div>
         <h2>Plantel</h2>
+        <a href="{% url 'index'%}">Regresar al inicio</a>
+        <h1></h1> 
         <a href="nuevo_plantel">Agregar</a>
         <table border="1">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre de Institucion</th>
-                    <th>Campus</th>
+                    <th>Carreras</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -26,7 +28,7 @@
                     <tr>
                         <td>{{plan.id}}</td>
                         <td>{{plan.nombre_institucion}}</td>
-                        <td>{{plan.campus}}</td>
+                        <td>{{plan.carreras}}</td>
                         <td><a href="detalle_plantel/{{plan.id}}">Detalles</a></td>
                         <td><a href="editar_plantel/{{plan.id}}">Editar</a></td>
                         <td><a href="eliminar_plantel/{{plan.id}}">Eliminar</a></td>

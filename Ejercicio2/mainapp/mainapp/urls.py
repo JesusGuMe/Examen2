@@ -21,9 +21,9 @@ from gestorapp.views import detalleAlumno, editarAlumno, nuevoAlumno, detalleDoc
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',inicio, name='index'),
-    path('',inicioalumno,name='index_alumno'),
-    path('',iniciodocente,name='index_docente'),
-    path('',inicioplantel,name='index_plantel'),
+    path('index_alumno',inicioalumno,name='index_alumno'),
+    path('index_docente',iniciodocente,name='index_docente'),
+    path('index_plantel',inicioplantel,name='index_plantel'),
     path('detalle_alumno/<int:id>', detalleAlumno),
     path('nuevo_alumno', nuevoAlumno),
     path('editar_alumno/<int:id>', editarAlumno),

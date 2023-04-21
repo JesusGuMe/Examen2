@@ -35,7 +35,7 @@ class Docente(models.Model):
 
 class Plantel(models.Model):
     nombre_institucion = models.CharField(max_length=255)
-    campus = models.IntegerField()
+    carreras = models.IntegerField()
     
     def __str__(self) -> str:
-        return f'Plantel {self.id}: {self.nombre_institucion} {self.campus}'
+        return f'Plantel {self.id}: {self.nombre_institucion} {self.carreras}'

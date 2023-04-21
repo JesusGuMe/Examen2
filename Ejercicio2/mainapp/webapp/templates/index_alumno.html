@@ -9,6 +9,8 @@
 <body>
     <div>
         <h2>Alumnos</h2>
+        <a href="{% url 'index'%}">Regresar al inicio</a>
+        <h1></h1>
         <a href="nuevo_alumno">Agregar</a>
         <table border="1">
             <thead>
@@ -33,9 +35,9 @@
                         <td>{{a.semestre}}</td>
                         <td>{{a.carrera}}</td>
                         <td>{{a.domicilio}}</td>
-                        <td><a href="detalle_alumno/{{a.id}}">Ver detalle</a></td>
-                        <td><a href="editar_alumno/{{a.id}}">Editar alumno</a></td>
-                        <td><a href="eliminar_alumno/{{a.id}}">Eliminar alumno</a></td>
+                        <td><a href="detalle_alumno/{{a.id}}">Detalles</a></td>
+                        <td><a href="editar_alumno/{{a.id}}">Editar</a></td>
+                        <td><a href="eliminar_alumno/{{a.id}}">Eliminar</a></td>
                     </tr>
                 {% endfor %}
             </tbody>
